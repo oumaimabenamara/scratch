@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from preview.colorlib.com/theme/foodblog/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 16 Dec 2020 15:14:25 GMT -->
+<head>
+<title>NomProjet</title>
+<link rel="icon" href="logo.png">
+<meta charset="UTF-8">
+<meta name="description" content="Food Blog Web Template">
+<meta name="keywords" content="food, unica, creative, html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700" rel="stylesheet">
+
+<link rel="stylesheet" href="css2/bootstrap.min.css" />
+<link rel="stylesheet" href="css2/font-awesome.min.css" />
+<link rel="stylesheet" href="css2/owl.carousel.css" />
+<link rel="stylesheet" href="css2/animate.css" />
+<link rel="stylesheet" href="css2/style.css" />
+  
+<link rel="stylesheet" href="projet.css">
+<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  
+
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css">  
+</head>
+
+
+<body>
+  <div id="id-page-2"></div>
+
+  <div id="preloder">
+    <div class="loader"></div>
+  </div>
+
+
+ <div class="HEADER1 fixed-top" id="Header1">
+  <header class="header-section">
+    <div class="header-top">
+      <div class="row">
+        <div class="col-md-3">
+          <a href="id-page-2" class="site-logo">
+            <img src="logo2.png" alt="logo" width="200" class="FORM">
+            <!-- <strong class="FORM1">NomProjet</strong> -->
+          </a>
+        </div>
+        <div class="col-md-6 FORM1">
+          <a href="page2(blog,fonctionnalitéspublic).html" class="euh"><strong>Blog</strong></a>
+          <a href="page3(profil,fonctionnalitésprivé).html" class="euh"><strong>Profil</strong></a>
+        </div>
+        <div class="col-md-2">
+          <input type="button" value="LogOut" class="LOGOUT" id="Logout" name="Logoout">
+        </div>
+        </div>
+      </div>
+  </header>
+ </div>
+
+ <div class="MAP" id="Map">
+  <script src="https://www.amcharts.com/lib/3/ammap.js" type="text/javascript"></script>
+  <script src="https://www.amcharts.com/lib/3/maps/js/worldHigh.js" type="text/javascript"></script>
+  <script src="https://www.amcharts.com/lib/3/themes/dark.js" type="text/javascript"></script>
+  <div id="mapdiv" style="width: 1530px; height: 450px;"></div>
+  <!-- <div style="width: 1530px; font-size: 70%; padding: 5px 0; text-align: center; background-color: #F2F2F7; margin-top: 1px; color: #4070B8;"><a href="https://www.amcharts.com/visited_countries/" style="color: #4070B8;">Create your own visited countries map</a> or check out the <a href="https://www.amcharts.com/" style="color: #4070B8;">JavaScript Charts</a>.</div> -->
+  <script type="text/javascript">
+  var map = AmCharts.makeChart("mapdiv",{
+  type: "map",
+  theme: "dark",
+  projection: "mercator",
+  panEventsEnabled : true,
+  backgroundColor : "#F2F2F7",
+  backgroundAlpha : 1,
+  zoomControl: {
+  zoomControlEnabled : true
+  },
+  dataProvider : {
+  map : "worldHigh",
+  getAreasFromMap : true,
+  areas :
+  []
+  },
+  areasSettings : {
+  autoZoom : true,
+  color : "#4070B8",
+  colorSolid : "#0300B0",
+  selectedColor : "#0300B0",
+  outlineColor : "#212121",
+  rollOverColor : "#4797FF",
+  rollOverOutlineColor : "#FFFFFF"
+  }
+  });
+  </script>  
+ </div>
+
+ <div class="PAYS">
+ <div class="row">
+  <div class="col-md-2">
+    <button class="CathegoriePays">Pays Visités</button>
+    <button class="CathegoriePays">Pays à Visiter</button>
+    <button class="CathegoriePays">Pays à Revisiter</button>
+  </div>
+  <div class="col-md-10">
+    <div class="LISTE-PAYS" id="ListePays">
+      <div class="col-sm-12">
+        <!-- <h2 class="family-light size-biggerer underline section-map-list-title">Select countries you visited</h2> -->
+        <div class="section-map-list">
+        <ul class="nav nav-tabs">
+        <li class="">
+        <a href="#europe" data-anchor="europe" data-toggle="tab" class="CONTINENT">Europe</a>
+        </li>
+        <li class="">
+        <a href="#northAmerica" data-anchor="northAmerica" data-toggle="tab" class="CONTINENT">North America</a>
+        </li>
+        <li class="active">
+        <a href="#southAmerica" data-anchor="southAmerica" data-toggle="tab" class="CONTINENT">South America</a>
+        </li>
+        <li class="">
+        <a href="#africa" data-anchor="africa" data-toggle="tab" class="CONTINENT">Africa</a>
+        </li>
+        <li class="">
+        <a href="#asia" data-anchor="asia" data-toggle="tab" class="CONTINENT">Asia</a>
+        </li>
+        <li class="">
+        <a href="#oceania" data-anchor="oceania" data-toggle="tab" class="CONTINENT">Oceania</a>
+        </li>
+        </ul>
+        
+        <div class="tab-content overflow-auto LP-container">
+    
+        <div id="europe" class="tab-pane">
+        <!-- <table class="table table-hover table-striped"><tbody><div class="checkbox"> -->
+          <label><input type="checkbox" name="map" class="LP" value="AX">Aland Islands</label><label><input type="checkbox" name="map" class="LP" value="AL">Albania</label><label><input type="checkbox" name="map" class="LP" value="AD">Andorra</label><label><input type="checkbox" name="map" class="LP" value="AM">Armenia</label><label><input type="checkbox" name="map" class="LP" value="AT">Austria</label><label><input type="checkbox" name="map" class="LP" value="AZ">Azerbaijan</label><label><input type="checkbox" name="map" class="LP" value="BY">Belarus</label><label><input type="checkbox" name="map" class="LP" value="BE">Belgium</label><label><input type="checkbox" name="map" class="LP" value="BA">Bosnia and Herzegovina</label><label><input type="checkbox" name="map" class="LP" value="BG">Bulgaria</label><label><input type="checkbox" name="map" class="LP" value="HR">Croatia</label><label><input type="checkbox" name="map" class="LP" value="CY">Cyprus</label><label><input type="checkbox" name="map" class="LP" value="CZ">Czechia</label><label><input type="checkbox" name="map" class="LP" value="DK">Denmark</label><label><input type="checkbox" name="map" class="LP" value="EE">Estonia</label><label><input type="checkbox" name="map" class="LP" value="FO">Faroe Islands</label><label><input type="checkbox" name="map" class="LP" value="FI">Finland</label><label><input type="checkbox" name="map" class="LP" value="FR">France</label><label><input type="checkbox" name="map" class="LP" value="GE">Georgia</label><label><input type="checkbox" name="map" class="LP" value="DE">Germany</label><label><input type="checkbox" name="map" class="LP" value="GI">Gibraltar</label><label><input type="checkbox" name="map" class="LP" value="GR">Greece</label><label><input type="checkbox" name="map" class="LP" value="GG">Guernsey</label><label><input type="checkbox" name="map" class="LP" value="HU">Hungary</label><label><input type="checkbox" name="map" class="LP" value="IS">Iceland</label><label><input type="checkbox" name="map" class="LP" value="IE">Ireland</label><label><input type="checkbox" name="map" class="LP" value="IM">Isle of Man</label><label><input type="checkbox" name="map" class="LP" value="IT">Italy</label><label><input type="checkbox" name="map" class="LP" value="JE">Jersey</label><label><input type="checkbox" name="map" class="LP" value="XK">Kosovo</label><label><input type="checkbox" name="map" class="LP" value="LV">Latvia</label><label><input type="checkbox" name="map" class="LP" value="LI">Liechtenstein</label><label><input type="checkbox" name="map" class="LP" value="LT">Lithuania</label><label><input type="checkbox" name="map" class="LP" value="LU">Luxembourg</label><label><input type="checkbox" name="map" class="LP" value="MT">Malta</label><label><input type="checkbox" name="map" class="LP" value="MD">Moldova</label><label><input type="checkbox" name="map" class="LP" value="MC">Monaco</label><label><input type="checkbox" name="map" class="LP" value="ME">Montenegro</label><label><input type="checkbox" name="map" class="LP" value="NL">Netherlands</label><label><input type="checkbox" name="map" class="LP" value="MK">North Macedonia</label><label><input type="checkbox" name="map" class="LP" value="NO">Norway</label><label><input type="checkbox" name="map" class="LP" value="PL">Poland</label><label><input type="checkbox" name="map" class="LP" value="PT">Portugal</label><label><input type="checkbox" name="map" class="LP" value="RO">Romania</label><label><input type="checkbox" name="map" class="LP" value="RU">Russia</label><label><input type="checkbox" name="map" class="LP" value="SM">San Marino</label><label><input type="checkbox" name="map" class="LP" value="RS">Serbia</label><label><input type="checkbox" name="map" class="LP" value="SK">Slovakia</label><label><input type="checkbox" name="map" class="LP" value="SI">Slovenia</label><label><input type="checkbox" name="map" class="LP" value="ES">Spain</label><label><input type="checkbox" name="map" class="LP" value="SJ">Svalbard and Jan Mayen</label><label><input type="checkbox" name="map" class="LP" value="SE">Sweden</label><label><input type="checkbox" name="map" class="LP" value="CH">Switzerland</label><label><input type="checkbox" name="map" class="LP" value="TR">Turkey</label><label><input type="checkbox" name="map" class="LP" value="UA">Ukraine</label><label><input type="checkbox" name="map" class="LP" value="GB">United Kingdom</label><label><input type="checkbox" name="map" class="LP" value="VA">Vatican City</label>
+        <!-- </td></tr></tbody></table> -->
+        </div>
+    
+        <div id="northAmerica" class="tab-pane">
+        <!-- <table class="table table-hover table-striped"><tbody><div class="checkbox"> -->
+          <label><input type="checkbox" name="map" class="LP" value="AI">Anguilla</label><label><input type="checkbox" name="map" class="LP" value="AG">Antigua and Barbuda</label><label><input type="checkbox" name="map" class="LP" value="AW">Aruba</label><label><input type="checkbox" name="map" class="LP" value="BS">Bahamas</label><label><input type="checkbox" name="map" class="LP" value="BB">Barbados</label><label><input type="checkbox" name="map" class="LP" value="BZ">Belize</label><label><input type="checkbox" name="map" class="LP" value="BM">Bermuda</label><label><input type="checkbox" name="map" class="LP" value="BQ">Bonair, Saint Eustachius and Saba</label><label><input type="checkbox" name="map" class="LP" value="VG">British Virgin Islands</label><label><input type="checkbox" name="map" class="LP" value="CA">Canada</label><label><input type="checkbox" name="map" class="LP" value="KY">Cayman Islands</label><label><input type="checkbox" name="map" class="LP" value="CR">Costa Rica</label><label><input type="checkbox" name="map" class="LP" value="CU">Cuba</label><label><input type="checkbox" name="map" class="LP" value="CW">Curaçao</label><label><input type="checkbox" name="map" class="LP" value="DM">Dominica</label><label><input type="checkbox" name="map" class="LP" value="DO">Dominican Republic</label><label><input type="checkbox" name="map" class="LP" value="SV">El Salvador</label><label><input type="checkbox" name="map" class="LP" value="GL">Greenland</label><label><input type="checkbox" name="map" class="LP" value="GD">Grenada</label><label><input type="checkbox" name="map" class="LP" value="GP">Guadeloupe</label><label><input type="checkbox" name="map" class="LP" value="GT">Guatemala</label><label><input type="checkbox" name="map" class="LP" value="HT">Haiti</label><label><input type="checkbox" name="map" class="LP" value="HN">Honduras</label><label><input type="checkbox" name="map" class="LP" value="JM">Jamaica</label><label><input type="checkbox" name="map" class="LP" value="MQ">Martinique</label><label><input type="checkbox" name="map" class="LP" value="MX">Mexico</label><label><input type="checkbox" name="map" class="LP" value="MS">Montserrat</label><label><input type="checkbox" name="map" class="LP" value="NI">Nicaragua</label><label><input type="checkbox" name="map" class="LP" value="PA">Panama</label><label><input type="checkbox" name="map" class="LP" value="PR">Puerto Rico</label><label><input type="checkbox" name="map" class="LP" value="BL">Saint Barthelemy</label><label><input type="checkbox" name="map" class="LP" value="KN">Saint Kitts and Nevis</label><label><input type="checkbox" name="map" class="LP" value="LC">Saint Lucia</label><label><input type="checkbox" name="map" class="LP" value="MF">Saint Martin</label><label><input type="checkbox" name="map" class="LP" value="PM">Saint Pierre and Miquelon</label><label><input type="checkbox" name="map" class="LP" value="VC">Saint Vincent and the Grenadines</label><label><input type="checkbox" name="map" class="LP" value="SX">Sint Maarten</label><label><input type="checkbox" name="map" class="LP" value="TT">Trinidad and Tobago</label><label><input type="checkbox" name="map" class="LP" value="TC">Turks and Caicos Islands</label><label><input type="checkbox" name="map" class="LP" value="US">United States</label><label><input type="checkbox" name="map" class="LP" value="VI">US Virgin Islands</label>
+        <!-- </td></tr></tbody></table> -->
+        </div>
+    
+        <div id="southAmerica" class="tab-pane active">
+        <!-- <table class="table table-hover table-striped"><tbody><div class="checkbox"> -->
+          <label><input type="checkbox" name="map" class="LP" value="AR">Argentina</label><label><input type="checkbox" name="map" class="LP" value="BO">Bolivia</label><label><input type="checkbox" name="map" class="LP" value="BR">Brazil</label><label><input type="checkbox" name="map" class="LP" value="CL">Chile</label><label><input type="checkbox" name="map" class="LP" value="CO">Colombia</label><label><input type="checkbox" name="map" class="LP" value="EC">Ecuador</label><label><input type="checkbox" name="map" class="LP" value="FK">Falkland Islands</label><label><input type="checkbox" name="map" class="LP" value="GF">French Guiana</label><label><input type="checkbox" name="map" class="LP" value="GY">Guyana</label><label><input type="checkbox" name="map" class="LP" value="PY">Paraguay</label><label><input type="checkbox" name="map" class="LP" value="PE">Peru</label><label><input type="checkbox" name="map" class="LP" value="GS">South Georgia and South Sandwich Islands</label><label><input type="checkbox" name="map" class="LP" value="SR">Suriname</label><label><input type="checkbox" name="map" class="LP" value="UY">Uruguay</label><label><input type="checkbox" name="map" class="LP" value="VE">Venezuela</label>
+        <!-- </td></tr></tbody></table> -->
+        </div>
+    
+        <div id="africa" class="tab-pane">
+        <!-- <table class="table table-hover table-striped"><tbody><div class="checkbox"> -->
+          <label><input type="checkbox" name="map" class="LP" value="DZ">Algeria</label><label><input type="checkbox" name="map" class="LP" value="AO">Angola</label><label><input type="checkbox" name="map" class="LP" value="BJ">Benin</label><label><input type="checkbox" name="map" class="LP" value="BW">Botswana</label><label><input type="checkbox" name="map" class="LP" value="BV">Bouvet Island</label><label><input type="checkbox" name="map" class="LP" value="BF">Burkina Faso</label><label><input type="checkbox" name="map" class="LP" value="BI">Burundi</label><label><input type="checkbox" name="map" class="LP" value="CM">Cameroon</label><label><input type="checkbox" name="map" class="LP" value="CV">Cape Verde</label><label><input type="checkbox" name="map" class="LP" value="CF">Central African Republic</label><label><input type="checkbox" name="map" class="LP" value="TD">Chad</label><label><input type="checkbox" name="map" class="LP" value="KM">Comoros</label><label><input type="checkbox" name="map" class="LP" value="CI">Côte d'Ivoire</label><label><input type="checkbox" name="map" class="LP" value="CD">Democratic Republic of Congo</label><label><input type="checkbox" name="map" class="LP" value="DJ">Djibouti</label><label><input type="checkbox" name="map" class="LP" value="EG">Egypt</label><label><input type="checkbox" name="map" class="LP" value="GQ">Equatorial Guinea</label><label><input type="checkbox" name="map" class="LP" value="ER">Eritrea</label><label><input type="checkbox" name="map" class="LP" value="SZ">eSwatini</label><label><input type="checkbox" name="map" class="LP" value="ET">Ethiopia</label><label><input type="checkbox" name="map" class="LP" value="GA">Gabon</label><label><input type="checkbox" name="map" class="LP" value="GM">Gambia</label><label><input type="checkbox" name="map" class="LP" value="GH">Ghana</label><label><input type="checkbox" name="map" class="LP" value="GO">Glorioso Islands</label><label><input type="checkbox" name="map" class="LP" value="GN">Guinea</label><label><input type="checkbox" name="map" class="LP" value="GW">Guinea-Bissau</label><label><input type="checkbox" name="map" class="LP" value="JU">Juan De Nova Island</label><label><input type="checkbox" name="map" class="LP" value="KE">Kenya</label><label><input type="checkbox" name="map" class="LP" value="LS">Lesotho</label><label><input type="checkbox" name="map" class="LP" value="LR">Liberia</label><label><input type="checkbox" name="map" class="LP" value="LY">Libya</label><label><input type="checkbox" name="map" class="LP" value="MG">Madagascar</label><label><input type="checkbox" name="map" class="LP" value="MW">Malawi</label><label><input type="checkbox" name="map" class="LP" value="ML">Mali</label><label><input type="checkbox" name="map" class="LP" value="MR">Mauritania</label><label><input type="checkbox" name="map" class="LP" value="MU">Mauritius</label><label><input type="checkbox" name="map" class="LP" value="YT">Mayotte</label><label><input type="checkbox" name="map" class="LP" value="MA">Morocco</label><label><input type="checkbox" name="map" class="LP" value="MZ">Mozambique</label><label><input type="checkbox" name="map" class="LP" value="NA">Namibia</label><label><input type="checkbox" name="map" class="LP" value="NE">Niger</label><label><input type="checkbox" name="map" class="LP" value="NG">Nigeria</label><label><input type="checkbox" name="map" class="LP" value="CG">Republic of Congo</label><label><input type="checkbox" name="map" class="LP" value="RE">Reunion</label><label><input type="checkbox" name="map" class="LP" value="RW">Rwanda</label><label><input type="checkbox" name="map" class="LP" value="SH">Saint Helena</label><label><input type="checkbox" name="map" class="LP" value="ST">Sao Tome and Principe</label><label><input type="checkbox" name="map" class="LP" value="SN">Senegal</label><label><input type="checkbox" name="map" class="LP" value="SC">Seychelles</label><label><input type="checkbox" name="map" class="LP" value="SL">Sierra Leone</label><label><input type="checkbox" name="map" class="LP" value="SO">Somalia</label><label><input type="checkbox" name="map" class="LP" value="ZA">South Africa</label><label><input type="checkbox" name="map" class="LP" value="SS">South Sudan</label><label><input type="checkbox" name="map" class="LP" value="SD">Sudan</label><label><input type="checkbox" name="map" class="LP" value="TZ">Tanzania</label><label><input type="checkbox" name="map" class="LP" value="TG">Togo</label><label><input type="checkbox" name="map" class="LP" value="TN">Tunisia</label><label><input type="checkbox" name="map" class="LP" value="UG">Uganda</label><label><input type="checkbox" name="map" class="LP" value="EH">Western Sahara</label><label><input type="checkbox" name="map" class="LP" value="ZM">Zambia</label><label><input type="checkbox" name="map" class="LP" value="ZW">Zimbabwe</label>
+        <!-- </td></tr></tbody></table> -->
+        </div>
+    
+        <div id="asia" class="tab-pane">
+        <!-- <table class="table table-hover table-striped"><tbody><div class="checkbox"> -->
+          <label><input type="checkbox" name="map" class="LP" value="AF">Afghanistan</label><label><input type="checkbox" name="map" class="LP" value="BH">Bahrain</label><label><input type="checkbox" name="map" class="LP" value="BD">Bangladesh</label><label><input type="checkbox" name="map" class="LP" value="BT">Bhutan</label><label><input type="checkbox" name="map" class="LP" value="IO">British Indian Ocean Territory</label><label><input type="checkbox" name="map" class="LP" value="BN">Brunei Darussalam</label><label><input type="checkbox" name="map" class="LP" value="KH">Cambodia</label><label><input type="checkbox" name="map" class="LP" value="CN">China (mainland)</label><label><input type="checkbox" name="map" class="LP" value="HK">Hong Kong</label><label><input type="checkbox" name="map" class="LP" value="IN">India</label><label><input type="checkbox" name="map" class="LP" value="ID">Indonesia</label><label><input type="checkbox" name="map" class="LP" value="IR">Iran</label><label><input type="checkbox" name="map" class="LP" value="IQ">Iraq</label><label><input type="checkbox" name="map" class="LP" value="IL">Israel</label><label><input type="checkbox" name="map" class="LP" value="JP">Japan</label><label><input type="checkbox" name="map" class="LP" value="JO">Jordan</label><label><input type="checkbox" name="map" class="LP" value="KZ">Kazakhstan</label><label><input type="checkbox" name="map" class="LP" value="KW">Kuwait</label><label><input type="checkbox" name="map" class="LP" value="KG">Kyrgyzstan</label><label><input type="checkbox" name="map" class="LP" value="LA">Lao People's Democratic Republic</label><label><input type="checkbox" name="map" class="LP" value="LB">Lebanon</label><label><input type="checkbox" name="map" class="LP" value="MO">Macau</label><label><input type="checkbox" name="map" class="LP" value="MY">Malaysia</label><label><input type="checkbox" name="map" class="LP" value="MV">Maldives</label><label><input type="checkbox" name="map" class="LP" value="MN">Mongolia</label><label><input type="checkbox" name="map" class="LP" value="MM">Myanmar</label><label><input type="checkbox" name="map" class="LP" value="NP">Nepal</label><label><input type="checkbox" name="map" class="LP" value="KP">North Korea</label><label><input type="checkbox" name="map" class="LP" value="OM">Oman</label><label><input type="checkbox" name="map" class="LP" value="PK">Pakistan</label><label><input type="checkbox" name="map" class="LP" value="PS">Palestinian Territories</label><label><input type="checkbox" name="map" class="LP" value="PH">Philippines</label><label><input type="checkbox" name="map" class="LP" value="QA">Qatar</label><label><input type="checkbox" name="map" class="LP" value="SA">Saudi Arabia</label><label><input type="checkbox" name="map" class="LP" value="SG">Singapore</label><label><input type="checkbox" name="map" class="LP" value="KR">South Korea</label><label><input type="checkbox" name="map" class="LP" value="LK">Sri Lanka</label><label><input type="checkbox" name="map" class="LP" value="SY">Syria</label><label><input type="checkbox" name="map" class="LP" value="TW">Taiwan</label><label><input type="checkbox" name="map" class="LP" value="TJ">Tajikistan</label><label><input type="checkbox" name="map" class="LP" value="TH">Thailand</label><label><input type="checkbox" name="map" class="LP" value="TL">Timor-Leste</label><label><input type="checkbox" name="map" class="LP" value="TM">Turkmenistan</label><label><input type="checkbox" name="map" class="LP" value="AE">United Arab Emirates</label><label><input type="checkbox" name="map" class="LP" value="UZ">Uzbekistan</label><label><input type="checkbox" name="map" class="LP" value="VN">Vietnam</label><label><input type="checkbox" name="map" class="LP" value="YE">Yemen</label>
+        <!-- </td></tr></tbody></table> -->
+        </div>
+    
+        <div id="oceania" class="tab-pane">
+        <!-- <table class="table table-hover table-striped"><tbody><div class="checkbox"> -->
+          <label><input type="checkbox" name="map" class="LP" value="AS">American Samoa</label><label><input type="checkbox" name="map" class="LP" value="AU">Australia</label><label><input type="checkbox" name="map" class="LP" value="UM-FQ">Baker Island</label><label><input type="checkbox" name="map" class="LP" value="CX">Christmas Island</label><label><input type="checkbox" name="map" class="LP" value="CC">Cocos (Keeling) Islands</label><label><input type="checkbox" name="map" class="LP" value="CK">Cook Islands</label><label><input type="checkbox" name="map" class="LP" value="FM">Federated States of Micronesia</label><label><input type="checkbox" name="map" class="LP" value="FJ">Fiji</label><label><input type="checkbox" name="map" class="LP" value="PF">French Polynesia</label><label><input type="checkbox" name="map" class="LP" value="TF">French Southern and Antarctic Lands</label><label><input type="checkbox" name="map" class="LP" value="GU">Guam</label><label><input type="checkbox" name="map" class="LP" value="HM">Heard Island and McDonald Islands</label><label><input type="checkbox" name="map" class="LP" value="UM-HQ">Howland Island</label><label><input type="checkbox" name="map" class="LP" value="UM-DQ">Jarvis Island</label><label><input type="checkbox" name="map" class="LP" value="UM-JQ">Johnston Atoll</label><label><input type="checkbox" name="map" class="LP" value="KI">Kiribati</label><label><input type="checkbox" name="map" class="LP" value="MH">Marshall Islands</label><label><input type="checkbox" name="map" class="LP" value="UM-MQ">Midway Islands</label><label><input type="checkbox" name="map" class="LP" value="NR">Nauru</label><label><input type="checkbox" name="map" class="LP" value="NC">New Caledonia</label><label><input type="checkbox" name="map" class="LP" value="NZ">New Zealand</label><label><input type="checkbox" name="map" class="LP" value="NU">Niue</label><label><input type="checkbox" name="map" class="LP" value="NF">Norfolk Island</label><label><input type="checkbox" name="map" class="LP" value="MP">Northern Mariana Islands</label><label><input type="checkbox" name="map" class="LP" value="PW">Palau</label><label><input type="checkbox" name="map" class="LP" value="PG">Papua New Guinea</label><label><input type="checkbox" name="map" class="LP" value="PN">Pitcairn Islands</label><label><input type="checkbox" name="map" class="LP" value="WS">Samoa</label><label><input type="checkbox" name="map" class="LP" value="SB">Solomon Islands</label><label><input type="checkbox" name="map" class="LP" value="TL">Timor-Leste</label><label><input type="checkbox" name="map" class="LP" value="TK">Tokelau</label><label><input type="checkbox" name="map" class="LP" value="TO">Tonga</label><label><input type="checkbox" name="map" class="LP" value="TV">Tuvalu</label><label><input type="checkbox" name="map" class="LP" value="VU">Vanuatu</label><label><input type="checkbox" name="map" class="LP" value="UM-WQ">Wake Island</label><label><input type="checkbox" name="map" class="LP" value="WF">Wallis and Futuna</label>
+        <!-- </td></tr></tbody></table> -->
+        </div>
+    
+        </div>
+        </div>
+        </div>
+     </div>
+  </div>
+</div>
+</div>
+
+
+
+<div class="VISITE-FONCTIONNALITE-PUBLIC" id="VisiteFonctionnalitePublic" >
+    <!-- <div id="colorlib-main"> -->
+      <section class="ftco-section ftco-no-pt ftco-no-pb">
+      <div class="container px-0">
+      <div class="row no-gutters">
+      <div class="col-md-4 d-flex">
+      <div class="blog-entry ftco-animate">
+      <a href="commenter.html" class="img" style="background-image: url(images/image_6.jpg);"></a>
+      <div class="text p-4">
+      <h3 class="mb-2"><a href="commenter.html">A Loving Heart is the Truest Wisdom</a></h3>
+      <div class="meta-wrap">
+      <p class="meta">
+      <span><i class="icon-calendar mr-2"></i>Sept. 10, 2019</span>
+      <span><a href="commenter.html"><i class="icon-folder-o mr-2"></i>Travel</a></span>
+      <span><i class="icon-comment2 mr-2"></i>5 Comment</span>
+      </p>
+      </div>
+      <p class="mb-4">A small river named Duden flows by their place and supplies</p>
+      <p><a href="#" class="btn-custom">Read More <span class="ion-ios-arrow-forward"></span></a></p>
+      </div>
+      </div>
+      </div>
+      <div class="col-md-4 d-flex">
+      <div class="blog-entry ftco-animate">
+      <a href="commenter.html" class="img" style="background-image: url(images/image_7.jpg);"></a>
+      <div class="text p-4">
+      <h3 class="mb-2"><a href="commenter.html">A Loving Heart is the Truest Wisdom</a></h3>
+      <div class="meta-wrap">
+      <p class="meta">
+      <span><i class="icon-calendar mr-2"></i>Sept. 10, 2019</span>
+      <span><a href="commenter.html"><i class="icon-folder-o mr-2"></i>Travel</a></span>
+      <span><i class="icon-comment2 mr-2"></i>5 Comment</span>
+      </p>
+      </div>
+      <p class="mb-4">A small river named Duden flows by their place and supplies</p>
+      <p><a href="#" class="btn-custom">Read More <span class="ion-ios-arrow-forward"></span></a></p>
+      </div>
+      </div>
+      </div>
+      <div class="col-md-4 d-flex">
+      <div class="blog-entry ftco-animate">
+      <a href="commenter.html" class="img" style="background-image: url(images/image_8.jpg);"></a>
+      <div class="text p-4">
+      <h3 class="mb-2"><a href="commenter.html">A Loving Heart is the Truest Wisdom</a></h3>
+      <div class="meta-wrap">
+      <p class="meta">
+      <span><i class="icon-calendar mr-2"></i>Sept. 10, 2019</span>
+      <span><a href="commenter.html"><i class="icon-folder-o mr-2"></i>Travel</a></span>
+      <span><i class="icon-comment2 mr-2"></i>5 Comment</span>
+      </p>
+      </div>
+      <p class="mb-4">A small river named Duden flows by their place and supplies</p>
+      <p><a href="#" class="btn-custom">Read More <span class="ion-ios-arrow-forward"></span></a></p>
+      </div>
+      </div>
+      </div>
+      <div class="col-md-4 d-flex">
+      <div class="blog-entry ftco-animate">
+      <a href="commenter.html" class="img" style="background-image: url(images/image_9.jpg);"></a>
+      <div class="text p-4">
+      <h3 class="mb-2"><a href="commenter.html">A Loving Heart is the Truest Wisdom</a></h3>
+      <div class="meta-wrap">
+      <p class="meta">
+      <span><i class="icon-calendar mr-2"></i>Sept. 10, 2019</span>
+      <span><a href="commenter.html"><i class="icon-folder-o mr-2"></i>Travel</a></span>
+      <span><i class="icon-comment2 mr-2"></i>5 Comment</span>
+      </p>
+      </div>
+      <p class="mb-4">A small river named Duden flows by their place and supplies</p>
+      <p><a href="#" class="btn-custom">Read More <span class="ion-ios-arrow-forward"></span></a></p>
+      </div>
+      </div>
+      </div>
+      <div class="col-md-4 d-flex">
+      <div class="blog-entry ftco-animate">
+      <a href="commenter.html" class="img" style="background-image: url(images/image_10.jpg);"></a>
+      <div class="text p-4">
+      <h3 class="mb-2"><a href="commenter.html">A Loving Heart is the Truest Wisdom</a></h3>
+      <div class="meta-wrap">
+      <p class="meta">
+      <span><i class="icon-calendar mr-2"></i>Sept. 10, 2019</span>
+      <span><a href="commenter.html"><i class="icon-folder-o mr-2"></i>Travel</a></span>
+      <span><i class="icon-comment2 mr-2"></i>5 Comment</span>
+      </p>
+      </div>
+      <p class="mb-4">A small river named Duden flows by their place and supplies</p>
+      <p><a href="#" class="btn-custom">Read More <span class="ion-ios-arrow-forward"></span></a></p>
+      </div>
+      </div>
+      </div>
+      <div class="col-md-4 d-flex">
+       <div class="blog-entry ftco-animate">
+      <a href="commenter.html" class="img" style="background-image: url(images/image_11.jpg);"></a>
+      <div class="text p-4">
+      <h3 class="mb-2"><a href="commenter.html">A Loving Heart is the Truest Wisdom</a></h3>
+      <div class="meta-wrap">
+      <p class="meta">
+      <span><i class="icon-calendar mr-2"></i>Sept. 10, 2019</span>
+      <span><a href="commenter.html"><i class="icon-folder-o mr-2"></i>Travel</a></span>
+      <span><i class="icon-comment2 mr-2"></i>5 Comment</span>
+      </p>
+      </div>
+      <p class="mb-4">A small river named Duden flows by their place and supplies</p>
+      <p><a href="#" class="btn-custom">Read More <span class="ion-ios-arrow-forward"></span></a></p>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </section>
+</div>
+
+
+<div class="FOOTER" id="Footer">
+  <!-- <div class="gallery">
+    <div class="gallery-slider owl-carousel">
+    <div class="gs-item set-bg" data-setbg="img/instagram/1.jpg"></div>
+    <div class="gs-item set-bg" data-setbg="img/instagram/2.jpg"></div>
+    <div class="gs-item set-bg" data-setbg="img/instagram/3.jpg"></div>
+    <div class="gs-item set-bg" data-setbg="img/instagram/4.jpg"></div>
+    <div class="gs-item set-bg" data-setbg="img/instagram/5.jpg"></div>
+    <div class="gs-item set-bg" data-setbg="img/instagram/6.jpg"></div>
+    </div>
+  </div> -->
+  <div>
+    <img src="footer3.png">
+  </div>
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+
+
+
+<script src="js2/jquery-3.2.1.min.js"></script>
+<script src="js2/owl.carousel.min.js"></script>
+<script src="js2/main.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js2', new Date());
+
+gtag('config', 'UA-23581568-13');
+</script>
+</body>
+
+<!-- Mirrored from preview.colorlib.com/theme/foodblog/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 16 Dec 2020 15:14:30 GMT -->
+</html>
