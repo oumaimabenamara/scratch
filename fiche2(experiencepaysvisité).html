@@ -5,10 +5,14 @@
 <head>
 <title>NomProjet</title>
 <link rel="icon" href="logo.png">
-<meta charset="UTF-8">
+<!-- <meta charset="UTF-8"> -->
 <meta name="description" content="Food Blog Web Template">
 <meta name="keywords" content="food, unica, creative, html">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 
@@ -122,9 +126,42 @@
               <textarea id="Experience" class="Experience" name="Experience" rows="5" cols="100"></textarea>
               <br>
               <label for="images">Ajouter images</label>
-              <input type="file">
+              <!-- <input type="file"> -->
+              <input type="file" id="images" />
+              <button type="button" id="upload">upload</button>
+              <img id="imgUpload"/>
+          
+              <script>
+                const inputFile = document.querySelector('#images');
+                const imageSrc = document.querySelector('#imgUpload');
+                const button = document.querySelector('#upload');
+          
+                let imgFile = '';
+          
+                inputFile.addEventListener('change', () => {
+                  const file = new FileReader();
+                  file.readAsDataURL(inputFile.files[0]);
+                  file.onload = function () {
+                    imgFile = file.result;
+                  };
+                });
+          
+                button.addEventListener('click', () => {
+                  imageSrc.src = imgFile;
+                  localStorage.setItem('img', imgFile);
+                });
+          
+                const image = localStorage.getItem('img') || '';
+                console.log(image);
+          
+                if (image) {
+                  imageSrc.src = image;
+                }
+              </script>
+              <img />
               <br>
-              <input type="submit">
+              <input type="submit" value="enregistrer">
+              <input type="button"value="publier">
             </form>
           </div>
       </div>
