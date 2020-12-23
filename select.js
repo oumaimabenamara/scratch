@@ -98,6 +98,7 @@ containerbig.addEventListener('click',e=>
         if (e.target.checked) 
         {
 array.push(e.target.value);
+localStorage.setItem('CP', JSON.stringify(CP));
 
             // if (clicked1) 
             // {
