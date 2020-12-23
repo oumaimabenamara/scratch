@@ -59,22 +59,32 @@ let CP = {
 
 
 
-
+// function uncheckAll() {
+//     $("input[type='checkbox']:checked").prop("checked", false)
+//   }
+//   $(':button').on('click', uncheckAll)
 
 function C1(){
      CP.array1 = [...array, ...CP.array1]
      array = []
+     $("input[type='checkbox']:checked").prop("checked", false)
      console.log(CP)
 }
 
 
 function C2(){
-    CP.array2 = array
+    CP.array2 = [...array, ...CP.array2]
+    array = []
+    $("input[type='checkbox']:checked").prop("checked", false)
+    console.log(CP)
 }
 
 
 function C3(){
-    CP.array3 = array
+    CP.array3 = [...array, ...CP.array3]
+    array = []
+    $("input[type='checkbox']:checked").prop("checked", false)
+    console.log(CP)
 }
 
 

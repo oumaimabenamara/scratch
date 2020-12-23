@@ -1,5 +1,13 @@
 // SELECTORS
+const CheckBox = document.querySelectorAll(".LP");
+var Pays = CheckBox.values;
 
+Checkbox.addEventListener('click', PaysCheck);
+
+function PaysCheck()
+{
+    console.log(Pays.parentElement.innerText);
+}
 // EVENTLISTENERS
 
 // FUNCTIONS
