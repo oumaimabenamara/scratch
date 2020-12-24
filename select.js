@@ -4,14 +4,9 @@ const visiter = document.querySelector('#CathegoriePaysA');
 const Avisiter= document.querySelector('#CathegoriePaysB');
 const Arevisiter= document.querySelector('#CathegoriePaysC');
 
-const countrieschecked = JSON.parse(localStorage.getItem('countrieschecked')) || [];
-
-
 // event listeners
 // document.addEventListener("submit",optionChecked)
 // document.addEventListener("submit",optionStored)
-
-
 
 
 // functions
@@ -46,12 +41,9 @@ const countrieschecked = JSON.parse(localStorage.getItem('countrieschecked')) ||
 // else{
 //     push
 // }
-let array = []
-let CP = {
-    array1:[],
-    array2:[],
-    array3:[],
-}
+
+
+
 
 // let clicked1 = (document.querySelector("CathegoriePaysA").clicked == true);
 // let clicked2 = (document.querySelector("CathegoriePaysB").clicked == true);
@@ -64,11 +56,24 @@ let CP = {
 //   }
 //   $(':button').on('click', uncheckAll)
 
+
+let array = []
+let CP = {
+    array1:[],
+    array2:[],
+    array3:[],
+}
+
+visiter.addEventListener('click', C1);
+Avisiter.addEventListener('click', C2);
+Arevisiter.addEventListener('click', C3);
+
 function C1(){
      CP.array1 = [...array, ...CP.array1]
      array = []
      $("input[type='checkbox']:checked").prop("checked", false)
      console.log(CP)
+     localStorage.setItem('CP', JSON.stringify(CP));
 }
 
 
@@ -77,6 +82,7 @@ function C2(){
     array = []
     $("input[type='checkbox']:checked").prop("checked", false)
     console.log(CP)
+    localStorage.setItem('CP', JSON.stringify(CP));
 }
 
 
@@ -85,8 +91,8 @@ function C3(){
     array = []
     $("input[type='checkbox']:checked").prop("checked", false)
     console.log(CP)
+    localStorage.setItem('CP', JSON.stringify(CP));
 }
-
 
 // let array1 =[];
 const containerbig = document.querySelector('.LP-container');
@@ -98,7 +104,6 @@ containerbig.addEventListener('click',e=>
         if (e.target.checked) 
         {
 array.push(e.target.value);
-localStorage.setItem('CP', JSON.stringify(CP));
 
             // if (clicked1) 
             // {
@@ -112,6 +117,8 @@ localStorage.setItem('CP', JSON.stringify(CP));
             // {
             //     CP.array3.push(e.target.value);
             // }
+           
+
         }
             
         
@@ -135,9 +142,8 @@ localStorage.setItem('CP', JSON.stringify(CP));
     }
 })
 
-visiter.addEventListener('click', C1);
-Avisiter.addEventListener('click', C2);
-Arevisiter.addEventListener('click', C3);
+
+
 
 
 // countries.forEach(country=>{
