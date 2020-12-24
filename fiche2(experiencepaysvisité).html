@@ -106,32 +106,60 @@
       <div class="EXPERIENCE">
         <div class="row FICHE">
             <form>
-              <label for="Pays">Pays</label>
-              <input type="text">
-              <br>
+              <div class="form-group">
+                <label for="Pays">Pays</label>
+                <input type="text" class="form-control" id="Pays" placeholder="Saisisser un pays ici">
+              </div>
+              
+              <div class="form-group">
               <label for="Villes">Villes</label>
-              <input type="text">
+              <input type="text" class="form-control" id="Villes" placeholder="les villes visités">
+            </div>
+              
+              <div class="form-group row">
+                <label for="date" class="col-2 col-form-label">Date</label>
+                <div class="col-10">
+                  <input class="form-control" type="date" id="date">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="Note">Note</label>
+                <input type="range" class="form-control-range" id="Note">
+              </div>
+              
+              <div class="form-check form-check-inline">
+                <label for="Revisiter">A Revisiter</label>
+
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="Revisiter">Oui</label>
+            
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="Revisiter">Non</label>
+              </div>
               <br>
-              <label for="Date">Date</label>
-              <input type="date">
-              <br>
-              <label for="Note">Note</label>
-              <input type="range">
-              <br>
-              <label for="Revisiter">A revisiter</label>
-              <input type="radio" name="Revisiter" value="oui">
-              <label for="oui">oui</label>
-              <input type="radio"name="Revisiter" value="non">
-              <label for="non">non</label>
-              <br>
-              <label for="Experience">Experience</label><br>
-              <textarea id="Experience" class="Experience" name="Experience" rows="5" cols="100"></textarea>
-              <br>
+              
+            
+              <div class="form-group">
+              <label for="experience">Experience</label>
+              <textarea class="form-control" id="experience" rows="3" placeholder="décriver votre experience"></textarea>
+              </div>
+              
               <label for="images">Ajouter images</label>
               <!-- <input type="file"> -->
               <input type="file" id="images" />
               <button type="button" id="upload">upload</button>
               <img id="imgUpload"/>
+              <br>
+              <div class="form-check form-check-inline">
+                <label>Public</label>
+                
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="option1">
+                <label class="form-check-label" for="inlineRadio3">Oui</label>
+            
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio4" value="option2">
+                <label class="form-check-label" for="inlineRdio4">Non</label>
+              </div>
           
               <script>
                 const inputFile = document.querySelector('#images');
@@ -162,8 +190,7 @@
               </script>
               <img />
               <br>
-              <input type="submit" value="enregistrer">
-              <input type="button"value="publier">
+              <button type="button" onclick="saveExperience()" class="btn btn-primary">Enregistrer</button>
             </form>
           </div>
       </div>
