@@ -28,4 +28,6 @@ function saveExperience() {
       Public,
     };
 console.log(experienceToSave);
+experienceSave.push(experienceToSave)
+localStorage.setItem('experienceToSave', JSON.stringify(experienceToSave));
 }
