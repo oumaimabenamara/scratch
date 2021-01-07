@@ -33,7 +33,7 @@ function saveExperience() {
     };
 console.log(experienceToSave);
 experienceSave.push(experienceToSave)
-localStorage.setItem('experienceToSave', JSON.stringify(experienceToSave));
+localStorage.setItem('experienceSave', JSON.stringify(experienceSave));
 }
 
 
