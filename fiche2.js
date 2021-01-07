@@ -17,6 +17,7 @@ function saveExperience() {
     if (checked3.checked) {
         Public=true;
     }
+    
 
     const experienceToSave = {
       Pays,

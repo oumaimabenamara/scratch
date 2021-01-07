@@ -77,7 +77,9 @@ html {
   border: solid 2px #0028ff;
   margin-left: 305px;
 }
-.CathegoriePays1 {
+.CathegoriePays1,
+.CathegoriePays2,
+.CathegoriePays3 {
   border: solid 1px gray;
   width: 270px;
   height: 50px;
