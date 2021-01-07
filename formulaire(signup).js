@@ -6,11 +6,15 @@ form.addEventListener('submit', e => {
   e.preventDefault();
   const email = form.email.value;
   const password = form.password.value;
+  const nom = form.nom.value;
+  const prenom = form.prenom.value;
   const random = Math.floor(Math.random() * 1000);
   const user = {
     email,
     password,
     id: random,
+    nom,
+    prenom
   };
   const unique = users.find(user => user.email === email);
   if (!unique) {
