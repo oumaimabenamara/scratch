@@ -77,7 +77,9 @@ html {
   border: solid 2px #0028ff;
   margin-left: 305px;
 }
-.CathegoriePays1 {
+.CathegoriePays1,
+.CathegoriePays2,
+.CathegoriePays3 {
   border: solid 1px gray;
   width: 270px;
   height: 50px;
@@ -166,7 +168,6 @@ aside {
   border-radius: 10px;
   background-color: rgb(14, 38, 167);
   color: white;
- 
 }
 .INSCRIPTION {
   /* background-color: rgb(236, 235, 235); */
@@ -192,4 +193,9 @@ aside {
 }
 .CONTINENT {
   color: black;
+}
+
+.deleteBtn {
+  transform: translateX(8rem);
+  opacity: 0;
 }

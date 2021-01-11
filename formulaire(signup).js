@@ -3,6 +3,7 @@ const form = document.querySelector('form');
 const users = JSON.parse(localStorage.getItem('users')) || [];
 
 form.addEventListener('submit', e => {
+  console.log(form);
   e.preventDefault();
   const email = form.email.value;
   const password = form.password.value;
@@ -13,9 +14,13 @@ form.addEventListener('submit', e => {
     email,
     password,
     id: random,
+    paysVisités : [],
+    paysAVisiter : [],
+    paysARevisiter : [],
     nom,
     prenom
   };
+  console.log(user);
   const unique = users.find(user => user.email === email);
   if (!unique) {
     users.push(user);
@@ -27,6 +32,6 @@ form.addEventListener('submit', e => {
 });
 
 const verification = form.verif.value;
-if (password != verification) {
-  alert('mot de passe incorrecte')
-}
+// if (password != verification) {
+//   alert('mot de passe incorrecte')
+// }

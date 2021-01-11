@@ -9,8 +9,11 @@ form.addEventListener('submit', e => {
   const exist = users.find(user => user.email === email && user.password === password);
   console.log(exist);
   if (exist) {
-    const userC = { id: exist.id, email: exist.email, nom: exist.nom, prenom:exist.prenom };
-    localStorage.setItem('userConnected', JSON.stringify(userC));
+    // const userC = { id: exist.id, email: exist.email, nom: exist.nom, prenom:exist.prenom };
+    // localStorage.setItem('userConnected', JSON.stringify(userC));
+    // location.href = 'page2(blog,fonctionnalitéspublic).html';
+
+    localStorage.setItem('userConnected', JSON.stringify(exist));
     location.href = 'page2(blog,fonctionnalitéspublic).html';
   } else {
     alert('email or password incorrect');
