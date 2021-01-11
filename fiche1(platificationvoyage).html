@@ -102,54 +102,42 @@
 
     <div id="colorlib-main">
       <div class="PLANIFICATION">
-            <div class="row FICHE">
-                <div class="col-md-9">
-                    <div class="contact-form">
-                        <!-- <div class="form-group">
-                          <label class="control-label col-sm-2" for="fname">Subject Title</label>
-                          <div class="col-sm-10">          
-                            <input type="text" class="form-control" id="fname" placeholder="Enter Title" name="fname">
-                          </div>
-                        </div> -->
-                       
-                        <div class="form-group">
-                          <label class="control-label col-sm-2" for="comment">Adding Notes</label>
-                          <div class="col-sm-10">
-                            <textarea class="form-control todo_input" rows="5" id="comment" placeholder="Add Notes"></textarea>
-                          </div>
-                        </div>
+            <div class="FICHE">
 
-                        <div class="form-group">        
-                          <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-primary todo_button">Save</button>
-                          </div>
-                        </div>
-                    </div>
+              <div class="title">
+      
+        
               </div>
-              <div class="col-md-7">
-                <div class="todo-container">
-                  <ul class="todo_list">
-                      <div class="todo">
-                          <!-- <li> </li>
-                          <button>edit</button>
-                          <button>done</button>
-                          <button>delete</button> -->
-                      </div>
-          
-                  </ul>
-          
-              </div>
-              </div>
-          <!-- <div class="col-md-8">
-            <textarea id="Planification" class="Planification" name="Planification" rows="17" cols="100"></textarea>
+              
+          <div class="row">
+          <div class="form col-md-6">
+              <form action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
+              <!-- <label for="mesNotes">Aouter Notes:</label>
+              <textarea name="mesNotes" rows="4" cols="50" id="add-todo" placeholder="ajouter vos notes ..."> -->
+              <p>Ajouter Vos Notes:</p>
+              <input type="text" id="add-todo" placeholder="Thing To-Do">
+              <input type="submit" value="Add" class="btn btn-primary">
+              </form>
+              <p>You Have: </p>
+              <p id="counter"></p>
           </div>
-          <div class="col-md-4 ICONES-A-AJOUTER">
-            <a href="" class="ICONET"><i class="fas fa-suitcase-rolling fa-2x"></i></a>
-            <a href="" class="ICONET"><i class="fas fa-suitcase-rolling fa-2x"></i></a>
-            <br>
-            <input type="submit">
-          </div> -->
+          <div class="form col-md-6 bg-white">
+            <table class="table table-bordered table-striped table-hover mt-4">
+              <tr class="to-do">
+              </tr>
+                  <tbody id="tasks">
+                  </tbody>
+              </table>
+          </div>
         </div>
+          
+          <div class="row" id="edit-box" role="aria-hidden">
+              <form action="javascript:void(0);" method="POST" id="save-edit">
+                <input type="text" id="edit-todo">
+                <input type="submit" value="Save" class="btn btn-success"/> <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+              </form>
+          </div>
+
       </div>
     </div>
 
@@ -214,7 +202,9 @@ gtag('js2', new Date());
 
 gtag('config', 'UA-23581568-13');
 </script>
-<script src="AjoutNotes.js"></script>
+<!-- <script src="AjoutNotes.js"></script> -->
+
+<script src="crude.js"></script>
 </body>
 
 <!-- Mirrored from preview.colorlib.com/theme/foodblog/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 16 Dec 2020 15:14:30 GMT -->
