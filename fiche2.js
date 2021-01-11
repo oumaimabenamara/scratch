@@ -5,35 +5,36 @@ const checked3 = document.getElementById('inlineRadio3')
 
 function saveExperience() {
     const Pays = form.Pays.value;
-    const Villes = form.Villes.value;
+    // const Villes = form.Villes.value;
     const date = form.date.value;
-    const Note = form.Note.value;
-    let Revisiter =false;    
-    if (checked1.checked ){
-        Revisiter=true;
+    // const Note = form.Note.value;
+    // let Revisiter =false;    
+    // if (checked1.checked ){
+    //     Revisiter=true;
         
-    }
+    // }
    
    
     const experience = form.experience.value;
-    let Public= false;
-    if (checked3.checked) {
-        Public=true;
-    }
+    // let Public= false;
+    // if (checked3.checked) {
+    //     Public=true;
+    // }
 
     const experienceToSave = {
       Pays,
-      Villes,
+      // Villes,
       date,
-      Note,
-      Revisiter,
+      // Note,
+      // Revisiter,
       experience,
-      Public,
+      // Public,
       imgFile
     };
 console.log(experienceToSave);
 experienceSave.push(experienceToSave)
 localStorage.setItem('experienceSave', JSON.stringify(experienceSave));
+location.reload()
 }
 
 

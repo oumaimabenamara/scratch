@@ -1,5 +1,7 @@
 const experienceSave =  JSON.parse(localStorage.getItem('experienceSave')) || [];
 const userConnected =  JSON.parse(localStorage.getItem('userConnected')) || {};
+console.log("aaaaa");
+console.log(experienceSave);
 console.log(userConnected.nom);
 var el= document.getElementById("bechir")
 var data = '';
