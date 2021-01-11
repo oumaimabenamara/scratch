@@ -114,12 +114,13 @@
               <form action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
               <!-- <label for="mesNotes">Aouter Notes:</label>
               <textarea name="mesNotes" rows="4" cols="50" id="add-todo" placeholder="ajouter vos notes ..."> -->
-              <p>Ajouter Vos Notes:</p>
-              <input type="text" id="add-todo" placeholder="Thing To-Do">
+              <h4>Ajouter Vos Notes:</h4>
+              <input type="text" id="add-todo" placeholder="">
+              <br><br>
               <input type="submit" value="Add" class="btn btn-primary">
               </form>
-              <p>You Have: </p>
-              <p id="counter"></p>
+              <span>You have: </span>
+              <span id="counter"></span>
           </div>
           <div class="form col-md-6 bg-white">
             <table class="table table-bordered table-striped table-hover mt-4">
@@ -134,7 +135,7 @@
           <div class="row" id="edit-box" role="aria-hidden">
               <form action="javascript:void(0);" method="POST" id="save-edit">
                 <input type="text" id="edit-todo">
-                <input type="submit" value="Save" class="btn btn-success"/> <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+                <input type="submit" value="Edit" class="btn btn-warning"/> <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
               </form>
           </div>
 
