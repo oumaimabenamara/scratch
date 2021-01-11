@@ -7,103 +7,19 @@ const aRevisiter = document.querySelector('#CathegoriePaysC');
 
 const listeVisité = document.querySelector('#CathegoriePays1');
 const listeAVisiter = document.querySelector('#CathegoriePays2');
-const listeARevisiter = document.querySelector('#CathegoriePays2');
+const listeARevisiter = document.querySelector('#CathegoriePays3');
 
-const mesPays1 = document.querySelector('#Mes-Pays1');
-const mesPays2 = document.querySelector('#Mes-Pays2');
-const mesPays3 = document.querySelector('#Mes-Pays3');
+var mesPays1 = document.querySelector('#Mes-Pays1');
+var mesPays2 = document.querySelector('#Mes-Pays2');
+var mesPays3 = document.querySelector('#Mes-Pays3');
 
-var users =JSON.parse( localStorage.getItem("users"))
-console.log(users);
-
-
-
-// localStorage.setItem('user', 'bechir');
-// console.log(localStorage.getItem('user'));
-
-// const user= {name:'bechir', age:18};
-// localStorage.setItem('user', JSON.stringify(user));
-// console.log(JSON.parse(localStorage.getItem('user')));
-
-let array = []
-// let CP = {
-//     array1:[],
-//     array2:[],
-//     array3:[],
-// }
-
-// let array1 = [];
-// let array2 = [];
-// let array3 = [];
-
-visité.addEventListener('click', C1);
-aVisiter.addEventListener('click', C2);
-aRevisiter.addEventListener('click', C3);
-
-function C1(){
-    //  CP.array1 = [...array, ...CP.array1]
-
-    //  array1 = [...array, ...array1]
-    //  array = []
-
-    //  users.paysVisités.push(CP.array1)
-    //  users.paysVisités.push(array)
-     users.paysVisités.concat(array)
-
-     $("input[type='checkbox']:checked").prop("checked", false)
-
-     console.log(users)
-
-     localStorage.setItem('users', JSON.stringify(users));
-
-    //  localStorage.setItem('CP', JSON.stringify(CP));
-    //  let tousPaysVisité = JSON.parse(localStorage.getItem('CP')) || [];
-    //  console.log(tousPaysVisité.array1);
-}
-
-function C2(){
-    // CP.array2 = [...array, ...CP.array2]
-
-    // array2 = [...array, ...array2]
-    // array = []
-
-    // users.paysAVisiter.push(CP.array2)
-    // users.paysAVisiter.push(array)
-    users.paysAVisiter.concat(array)
-
-    $("input[type='checkbox']:checked").prop("checked", false)
-
-    console.log(users)
-    
-    localStorage.setItem('users', JSON.stringify(users));
-
-    // localStorage.setItem('CP', JSON.stringify(CP));
-    // let tousPaysAVisiter = JSON.parse(localStorage.getItem('CP')) || [];
-    // console.log(tousPaysAVisiter.array2);
-}
-
-function C3(){
-    // CP.array3 = [...array, ...CP.array3]
-
-    // array3 = [...array, ...array3]
-    // array = []
-
-    // users.paysARevisiter.push(CP.array3)
-    // users.paysARevisiter.push(array)
-    users.paysARevisiter.concat(array)
-
-    $("input[type='checkbox']:checked").prop("checked", false)
-
-    console.log(users)
-
-    localStorage.setItem('users', JSON.stringify(users));
-
-    // localStorage.setItem('CP', JSON.stringify(CP));
-    // let tousPaysARevisiter = JSON.parse(localStorage.getItem('CP')) || [];
-    // console.log(tousPaysARevisiter.array3);
-}
+var users =JSON.parse(localStorage.getItem("users"));
+var connectedUser=JSON.parse(localStorage.getItem("userConnected"));
 
 
+
+
+let array = [];
 
 containerbig.addEventListener('click',e=> 
 {
@@ -112,7 +28,9 @@ containerbig.addEventListener('click',e=>
         
         if (e.target.checked) 
         {
+            // console.log(e.target.value);
             array.push(e.target.value);
+            // console.log(array);
         }
         else
         {
@@ -123,14 +41,88 @@ containerbig.addEventListener('click',e=>
 
 
 
-// let tousPays = JSON.parse(localStorage.getItem('CP')) || [];
+visité.addEventListener('click', C1);
+aVisiter.addEventListener('click', C2);
+aRevisiter.addEventListener('click', C3);
 
-// console.log(JSON.parse(localStorage.getItem('CP')));
+var userIndex;
 
-// console.log(tousPays.array1);
-// console.log(tousPays.array2);
-// console.log(tousPays.array3);
+function C1()
+{
+    array.forEach(element=>{
+        connectedUser.paysVisités.push(element)
+    })
+    //  console.log(array);
 
-// console.log(tousPaysVisité.array1);
-// console.log(tousPaysAVisiter.array2);
-// console.log(tousPaysARevisiter.array3);
+     const exist = users.find(user => user.email === connectedUser.email);
+     array.forEach(element=>{
+        exist.paysVisités.push(element)
+    })
+    // console.log(exist);
+
+     $("input[type='checkbox']:checked").prop("checked", false)
+     var userIndex = users.indexOf(exist)
+     users.splice(users.indexOf(exist),1,exist)
+
+    localStorage.setItem('userConnected', JSON.stringify(connectedUser));
+    localStorage.setItem('users', JSON.stringify(users));
+
+    array = []
+
+
+
+    // const longeurListeExistante = document.querySelectorAll("#Mes-Pays1 li").length;
+    // for (let i=longeurListeExistante ; i<thisUserList1.length ; i++)
+    // {
+    //     mesPays1.innerHTML = '<li>' + thisUserList1[i] + '<li>' + '<i class="fas fa-trash-alt"></i>';
+    // }
+}
+
+function C2()
+{
+    array.forEach(element=>{
+        connectedUser.paysAVisiter.push(element)
+    })
+    //  console.log(array);
+
+     const exist = users.find(user => user.email === connectedUser.email);
+     array.forEach(element=>{
+        exist.paysAVisiter.push(element)
+    })
+    // console.log(exist);
+
+     $("input[type='checkbox']:checked").prop("checked", false)
+     var userIndex = users.indexOf(exist)
+     users.splice(users.indexOf(exist),1,exist)
+    localStorage.setItem('userConnected', JSON.stringify(connectedUser));
+    localStorage.setItem('users', JSON.stringify(users));
+
+    array = []
+
+
+}
+
+function C3()
+{
+    array.forEach(element=>{
+        connectedUser.paysARevisiter.push(element)
+    })
+    //  console.log(array);
+
+     const exist = users.find(user => user.email === connectedUser.email);
+     array.forEach(element=>{
+        exist.paysARevisiter.push(element)
+    })
+    // console.log(exist);
+
+     $("input[type='checkbox']:checked").prop("checked", false)
+     var userIndex = users.indexOf(exist)
+     console.log(userIndex);
+     users.splice(users.indexOf(exist),1,exist)
+    localStorage.setItem('userConnected', JSON.stringify(connectedUser));
+    localStorage.setItem('users', JSON.stringify(users));
+   
+    array = []
+}
+
+

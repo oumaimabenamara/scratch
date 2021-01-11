@@ -11,7 +11,10 @@ function saveExperience() {
     let Revisiter =false;    
     if (checked1.checked ){
         Revisiter=true;
+        
     }
+   
+   
     const experience = form.experience.value;
     let Public= false;
     if (checked3.checked) {
@@ -27,6 +30,38 @@ function saveExperience() {
       Revisiter,
       experience,
       Public,
+      imgFile
     };
 console.log(experienceToSave);
+experienceSave.push(experienceToSave)
+localStorage.setItem('experienceSave', JSON.stringify(experienceSave));
 }
+
+
+const inputFile = document.querySelector('#images');
+                const imageSrc = document.querySelector('#imgUpload');
+                const button = document.querySelector('#upload');
+          
+                let imgFile = '';
+          
+                inputFile.addEventListener('change', () => {
+                   
+                  const file = new FileReader();
+                  file.readAsDataURL(inputFile.files[0]);
+                  file.onload = function () {
+                    imgFile = file.result;
+                  };
+                });
+          
+                // button.addEventListener('click', () => {
+                   
+                //   imageSrc.src = imgFile;
+                //   localStorage.setItem('img', imgFile);
+                // });
+          
+                const image = localStorage.getItem('img') || '';
+                console.log(image);
+          
+                if (image) {
+                  imageSrc.src = image;
+                }
