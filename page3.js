@@ -1,5 +1,6 @@
 const experienceSave =  JSON.parse(localStorage.getItem('experienceSave')) || [];
-
+const userConnected =  JSON.parse(localStorage.getItem('userConnected')) || {};
+console.log(userConnected.nom);
 var el= document.getElementById("bechir")
 var data = '';
 function FetchAll () {
@@ -17,7 +18,7 @@ function FetchAll () {
       <div class="meta-wrap">
       <p class="meta">  
       <span><i class="icon-calendar mr-2"></i>${element.date}</span>
-      <span><a href="commenter.html"><i class="icon-folder-o mr-2"></i>${element.Pays}</a></span>
+      <span><a href="commenter.html"><i class="icon-folder-o mr-2"></i>Travel</a></span>
       <span><i class="icon-comment2 mr-2"></i> Comment</span>
       </p>
       </div>
@@ -27,7 +28,7 @@ function FetchAll () {
       <div class="icon d-flex align-items-center my-5">
       <div class="img" style="background-image: url('https://previews.123rf.com/images/triken/triken1608/triken160800029/61320775-male-avatar-profile-picture-default-user-avatar-guest-avatar-simply-human-head-vector-illustration-i.jpg');"></div>
       <div class="position pl-3">
-      
+      <h4 class="mb-0">${userConnected.prenom} ${ userConnected.nom}</h4>
       </div>
       </div>
       </div>
