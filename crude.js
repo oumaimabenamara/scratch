@@ -70,11 +70,11 @@ var app = new function() {
   
     this.Count = function(data) {
       var el   = document.getElementById('counter');
-      var name = 'Tasks';
+      var name = 'notes';
   
       if (data) {
           if(data ==1){
-              name = 'Task'
+              name = 'note'
           }
         el.innerHTML = data + ' ' + name ;
       } 
